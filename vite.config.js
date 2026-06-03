@@ -8,7 +8,7 @@ export default defineConfig(({ mode }) => ({
     tailwindcss()
   ],
   build: {
-    outDir: 'dist',
+    outDir: 'docs',
     cssCodeSplit: true,
     assetsDir: 'assets',
     rollupOptions: {
