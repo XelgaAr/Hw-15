@@ -13,6 +13,22 @@
     <div class="page-container">
       <header class="header">
         <a class="logo" href="">site Logo</a>
+        
+        <!-- Custom Pill Theme Switcher -->
+        <button id="theme-toggle" class="relative inline-flex h-8 w-16 items-center rounded-full bg-white border border-gray-300 dark:bg-gray-800 dark:border-gray-700 transition-colors duration-300 cursor-pointer p-0.5" aria-label="Toggle dark mode">
+          <span class="flex h-7 w-7 items-center justify-center rounded-full bg-amber-400 text-white transition-transform duration-300 transform dark:translate-x-8 dark:bg-indigo-600 shadow-sm">
+            <!-- Sun Icon (visible in light mode) -->
+            <svg class="h-4 w-4 block dark:hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="5" fill="currentColor"></circle>
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" />
+            </svg>
+            <!-- Moon Icon (visible in dark mode) -->
+            <svg class="h-4 w-4 hidden dark:block" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" fill="currentColor" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+            </svg>
+          </span>
+        </button>
+
         <nav class="navbar">
           <ul class="navbar-list">
             <li class="navbar-item"><a href="" class="navbar-link">Home</a></li>
@@ -20,10 +36,88 @@
             <li class="navbar-item"><a href="" class="navbar-link">Contact</a></li>
           </ul>
         </nav>
-        <button id="theme-toggle" class="px-4 py-2 text-sm font-medium border border-gray-300 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800 dark:border-gray-700 dark:text-white transition-colors duration-200 cursor-pointer">
-          Toggle Theme
-        </button>
       </header>
+
+      <!-- Breadcrumbs -->
+      <nav class="flex items-center gap-2 text-sm text-gray-500 dark:text-gray-400 mb-8" aria-label="Breadcrumb">
+        <a href="#" class="hover:text-blue-600 dark:hover:text-amber-400 flex items-center">
+          <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+          </svg>
+        </a>
+        <span class="text-gray-400 text-xs">></span>
+        <a href="#" class="hover:text-blue-600 dark:hover:text-amber-400">Articles</a>
+        <span class="text-gray-400 text-xs">></span>
+        <span class="font-medium text-gray-800 dark:text-gray-200">All</span>
+      </nav>
+
+      <!-- Main Articles Grid (2 Cards) -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+        <!-- Card 1 (Left, wider) -->
+        <div class="relative md:col-span-2 group overflow-hidden rounded-xl h-80 shadow-md">
+          <img src="/code_card_1.png" alt="Code Card 1" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+          <div class="absolute bottom-0 left-0 p-6">
+            <h2 class="text-xl md:text-2xl font-bold text-white uppercase tracking-wide">
+              Nesciunt praesentium atque sint voluptate.
+            </h2>
+          </div>
+        </div>
+
+        <!-- Card 2 (Right, narrower) -->
+        <div class="relative group overflow-hidden rounded-xl h-80 shadow-md">
+          <img src="/code_card_2.png" alt="Code Card 2" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+          <div class="absolute bottom-0 left-0 p-6">
+            <h2 class="text-xl font-bold text-white uppercase tracking-wide">
+              Ipsam deleniti quo sequi voluptatem!
+            </h2>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom Content Area -->
+      <h2 class="text-2xl font-bold text-indigo-900 dark:text-indigo-300 mb-6 uppercase">
+        Lorem Ipsum Dolor Amet
+      </h2>
+
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
+        <!-- Left Column: Articles List -->
+        <div class="lg:col-span-2 space-y-6">
+          <div class="flex flex-col sm:flex-row gap-6 p-4 rounded-xl border border-gray-100 dark:border-gray-800 bg-white dark:bg-gray-800 shadow-sm hover:shadow-md transition-shadow">
+            <img src="/typing_hands.png" alt="Article Thumbnail" class="w-full sm:w-48 h-32 object-cover rounded-lg">
+            <div class="flex-1 flex flex-col justify-center">
+              <h3 class="text-lg font-semibold text-indigo-900 dark:text-indigo-300 hover:underline cursor-pointer mb-2">
+                Laborum blanditiis corrupti ipsa magni?
+              </h3>
+              <p class="text-sm text-gray-600 dark:text-gray-400">
+                Sit amet consectetur adipisicing elit. Sit dolore sequi aperiam perspiciatis placeat illum voluptates consectetur quia.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column: Subscribe Form -->
+        <div>
+          <div class="p-6 rounded-xl bg-gray-50 dark:bg-gray-800/50 border border-gray-100 dark:border-gray-800/80 shadow-sm">
+            <h3 class="text-lg font-bold text-indigo-900 dark:text-indigo-300 mb-2 uppercase">
+              Subscribe Form
+            </h3>
+            <p class="text-sm text-gray-600 dark:text-gray-400 mb-4">
+              Subscribe to our news:
+            </p>
+            <form class="space-y-4" onsubmit="event.preventDefault()">
+              <div>
+                <label for="email" class="sr-only">Email address</label>
+                <input type="email" id="email" placeholder="Email address" class="w-full px-4 py-2 text-sm border border-gray-300 dark:border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 bg-white dark:bg-gray-850 dark:text-white">
+              </div>
+              <button type="submit" class="w-full py-2 text-sm font-semibold text-white bg-indigo-600 hover:bg-indigo-700 dark:bg-indigo-500 dark:hover:bg-indigo-600 rounded-lg transition-colors cursor-pointer">
+                Subscribe
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
   <script type="module" src="/src/main.js"></script>
