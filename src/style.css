@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import './tailwind.config.css';
+
+.body {
+  @apply bg-white font-main dark:bg-gray-900;
+}
+
+.page-container {
+  @apply container mx-auto px-4;
+}
+
+.header {
+  @apply flex items-center justify-between gap-8 mb-10 border-b border-gray-200;
+}
+
+.navbar-link {
+  @apply block px-2 py-1 relative uppercase transition duration-300 text-gray-700 hover:text-blue-600;
+}
